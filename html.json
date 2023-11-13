@@ -1,0 +1,189 @@
+{
+  "How Many Heading Tags In HTML?": {
+    "options": ["3", "5", "8", "6"],
+    "answer": "6"
+  },
+  "Which Tag do we use to make a row in a table?": {
+    "options": ["&lt;trow&gt;", "&lt;tr&gt;", "&lt;row&gt;", "&lt;td&gt;"],
+    "answer": "&lt;tr&gt;"
+  },
+  "What does HTML stand for?": {
+    "options": [
+      "Hyper Text Preprocessor",
+      "Hyper Text Markup Language",
+      "Hyper Text Multiple Language",
+      "Hyper Tool Multi Language"
+    ],
+    "answer": "Hyper Text Markup Language"
+  },
+  "What is the correct HTML for adding a background color?": {
+    "options": [
+      "&lt;background&gt;yellow&lt;background&gt;",
+      "&lt;body style= 'background-color:yellow;' &gt;",
+      "&lt;body bg='yellow'&gt;",
+      "None Of The Above"
+    ],
+    "answer": "&lt;body style= 'background-color:yellow;' &gt;"
+  },
+  "What is the correct HTML for creating a hyperlink?": {
+    "options": [
+      "&lt;a name='http://www.w3schools.com'&gt;W3Schools.com&lt;/a&gt;",
+      "&lt;a&gt;http://www.w3schools.com&lt;/a&gt;",
+      "&lt;a url='http://www.w3schools.com&gt';W3Schools.com&lt;/a&gt;'",
+      "&lt;a href='http://www.w3schools.com'&gt;W3Schools&lt;/a&gt;"
+    ],
+    "answer": "&lt;a href='http://www.w3schools.com'&gt;W3Schools&lt;/a&gt;"
+  },
+  "Which character is used to indicate an end tag?": {
+    "options": ["/", "&lt;", "&gt;", "*"],
+    "answer": "/"
+  },
+  "Choose the correct HTML element for the largest heading:": {
+    "options": ["&lt;heading&gt;", "&lt;h1&gt;", "&lt;head&gt;", "&lt;h6&gt;"],
+    "answer": "&lt;h6&gt;"
+  },
+  "What is the correct HTML element for inserting a line break?": {
+    "options": ["&lt;br&gt;", "&lt;break&gt;", "&lt;lb&gt;"],
+    "answer": "&lt;br&gt;"
+  },
+  "How can you open a link in a new tab/browser window?": {
+    "options": [
+      "&lt;a href = 'url' new&gt;",
+      "&lt;a href = 'url' target= '_blank'&gt;",
+      "&lt;a href = 'url' target= 'new'&gt;"
+    ],
+    "answer": "&lt;a href = 'url' target= '_blank'&gt;"
+  },
+  "Which of these elements are all &lt;table&gt; elements?": {
+    "options": [
+      "&lt;thead&gt; &lt;body&gt; &lt;tr&gt;",
+      "&lt;table&gt; &lt;tr&gt; &lt;td&gt;",
+      "&lt;table&gt; &lt;tr&gt; &lt;tt&gt;",
+      "&lt;thead&gt; &lt;head&gt; &lt;tfoot&gt;"
+    ],
+    "answer": "&lt;table&gt; &lt;tr&gt; &lt;td&gt;"
+  },
+  "How can you make a numbered list?": {
+    "options": ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;list&gt;", "&lt;dl&gt;"],
+    "answer": "&lt;ol&gt;"
+  },
+  "How can you make a bulleted list?": {
+    "options": ["&lt;ol&gt;", "&lt;ul&gt;", "&lt;dl&gt;", "&lt;list&gt;"],
+    "answer": "&lt;ul&gt;"
+  },
+  "What is the correct HTML for making a checkbox?": {
+    "options": [
+      "&lt;checkbox&gt;",
+      "&lt;check&gt;",
+      "&lt;input type = 'checkbox'&gt;",
+      "&lt;input type = 'check'&gt;"
+    ],
+    "answer": "&lt;input type = 'checkbox'&gt;"
+  },
+  "What is the correct HTML for making a text input field?": {
+    "options": [
+      "&lt;input type = 'textfield'&gt;",
+      "&lt;input type = 'text'&gt;",
+      "&lt;text input type = 'text'&gt;",
+      "&lt;textfield&gt;"
+    ],
+    "answer": "&lt;input type = 'text'&gt;"
+  },
+  "What is the correct HTML for making a drop-down list?": {
+    "options": [
+      "&lt;input type = 'list'&gt;",
+      "&lt;select&gt;",
+      "&lt;list&gt;",
+      "&lt;dropdown&gt;"
+    ],
+    "answer": "&lt;select&gt;"
+  },
+  "What is the correct HTML for making a text area?": {
+    "options": [
+      "&lt;textarea&gt;",
+      "&lt;input type = 'textbox'&gt;",
+      "&lt;input type = 'textarea'&gt;"
+    ],
+    "answer": "&lt;textarea&gt;"
+  },
+  "HTML comments start with &lt;!-- and end with --&gt;": {
+    "options": ["True", "False"],
+    "answer": "True"
+  },
+  "Block elements are normally displayed without starting a new line.": {
+    "options": ["True", "False"],
+    "answer": "False"
+  },
+  "Which HTML element defines the title of a document?": {
+    "options": ["&lt;meta&gt;", "&lt;head&gt;", "&lt;title&gt;"],
+    "answer": "&lt;title&gt;"
+  },
+  "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?": {
+    "options": ["alt", "longdesc", "title", "src"],
+    "answer": "alt"
+  },
+  "Which HTML element is used to specify a footer for a document or section?": {
+    "options": [
+      "&lt;footer&gt;",
+      "&lt;bottom&gt;",
+      "&lt;section&gt;",
+      "&lt;aside&gt;"
+    ],
+    "answer": "&lt;footer&gt;"
+  },
+  "What is the correct HTML element for playing video files?": {
+    "options": ["&lt;movie&gt;", "&lt;video&gt;", "&lt;media&gt;"],
+    "answer": "&lt;video&gt;"
+  },
+  "What is the correct HTML element for playing audio files?": {
+    "options": ["&lt;mp3&gt;", "&lt;audio&gt;", "&lt;sound&gt;"],
+    "answer": "&lt;audio&gt;"
+  },
+  "The HTML global attribute, 'contenteditable' is used to:": {
+    "options": [
+      "Return the position of the first found occurrence of content inside a string",
+      "Specifies a context menu for an element. The Menu appears when a uesr right-clicks on the element",
+      "Update content from the server",
+      "Specify whether the content of an element should be editable or not"
+    ],
+    "answer": "Specify whether the content of an element should be editable or not"
+  },
+  "In HTML, onblur and onfocus are:": {
+    "options": ["Style attributes", "Event attributes", "HTML elements"],
+    "answer": "Style attributes"
+  },
+  "Graphics defined by SVG is in which format?": {
+    "options": ["CSS", "HTML", "XML", "None Of The Above"],
+    "answer": "XML"
+  },
+  "The HTML &lt;canvas&gt; element is used to:": {
+    "options": [
+      "Display data base records",
+      "Create draggable elements",
+      "Manipulate data in mysql",
+      "Draw graphics"
+    ],
+    "answer": "Draw graphics"
+  },
+  "In HTML, which attribute is used to specify that an input field must be filled out?": {
+    "options": ["required", "formvalidate", "placeholder", "validate"],
+    "answer": "required"
+  },
+  "Which input type defines a slider control?": {
+    "options": ["search", "slider", "controls", "range"],
+    "answer": "range"
+  },
+  "Which HTML element is used to display a scalar measurement within a range?": {
+    "options": [
+      "&lt;gauge&gt;",
+      "&lt;measure&gt;",
+      "&lt;meter&gt;",
+      "&lt;range&gt;"
+    ],
+    "answer": "&lt;meter&gt;"
+  },
+  "Which HTML element defines navigation links?": {
+    "options": ["&lt;navigate&gt;", "&lt;navigation&gt;", "&lt;nav&gt;"],
+    "answer": "&lt;nav&gt;"
+  }
+}
