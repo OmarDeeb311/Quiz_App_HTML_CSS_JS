@@ -5,7 +5,7 @@ fetch("html.json")
     return result.json();
   })
   .then((result) => {
-    //? Creates An Array from Json object to shuffle
+    //! Creates An Array from Json object to shuffle
     let array_of_object = Object.keys(result).map((key) => {
       return {
         question: key,
@@ -15,7 +15,7 @@ fetch("html.json")
     });
     shuffleArray(array_of_object);
 
-    //? Get Every Question Details From Shuffled Array
+    //! Get Every Question Details From Shuffled Array
     for (let i = 0; i < array_of_object.length; i++) {
       let q_num = `Q${i + 1}`;
       let question = `${q_num}`;
@@ -25,7 +25,7 @@ fetch("html.json")
       let options_array = Array.from(options);
       let Answer = array_of_object[i].answer;
 
-      //? Create QuestionDiv
+      //! Create Question Div
       let question_div = document.createElement("div");
       question_div.className = "question";
       question_div.setAttribute("id", `q${i + 1}`);
@@ -33,24 +33,24 @@ fetch("html.json")
         question_div.classList.add("disable");
       }
 
-      //? Create Question Title
+      //! Create Question Title
       let h3 = document.createElement("h3");
       h3.innerHTML = question;
 
-      //? Create Options Div
+      //! Create Options Div
       let opt = document.createElement("div");
       opt.className = "options";
 
-      //? Create Submit Button
+      //! Create Submit Button
       let submit = document.createElement("button");
       submit.innerHTML = "Submit";
       submit.className = "submit-button";
 
-      //? Randomize The Options
+      //! Randomize The Options
       let random_options = [...options_array];
       shuffleArray(random_options);
 
-      //? Sets Options
+      //! Sets Options
       for (let j = 0; j < random_options.length; j++) {
         let input = document.createElement("input");
         let label = document.createElement("label");
@@ -65,7 +65,7 @@ fetch("html.json")
         ans.appendChild(label);
         opt.appendChild(ans);
       }
-      //? Click Submit --> check for correct answer , jump to the next.
+      //! Click Submit --> check for correct answer , jump to the next.
       submit.addEventListener("click", () => {
         let length = Object.keys(result).length;
         let parent = submit.parentElement;
@@ -91,30 +91,23 @@ fetch("html.json")
         }
       });
 
-      //? Timer
-      let timer = document.createElement("span");
-      timer.className = "time";
-      let timer_value = document.createElement("span");
-      let timer_word = "Timer : 01:20 ";
-      timer.innerHTML = `${timer_word}`;
-      timer.appendChild(timer_value);
+      //! Append Childs to the question.
 
       question_div.appendChild(h3);
-      question_div.appendChild(timer);
       question_div.appendChild(opt);
       question_div.appendChild(submit);
       document.querySelector(".container").appendChild(question_div);
     }
 
-    //? Start First Question Timer
+    //! Start First Question Timer
     setTimeout(() => {
-      let e = document.querySelector("#q1");
-      startTime(e, Object.keys(result).length);
+      let firstQuestion = document.querySelector("#q1");
+      startTime(firstQuestion, Object.keys(result).length);
     });
   });
 
 let num_of_questions = 0;
-//? Start Timer of the given div
+//! Start Timer of the given div
 function startTime(element, length) {
   let progress = document.querySelector(".container .progress");
   progress.style.width = `${Math.floor((num_of_questions / length) * 100)}%`;
@@ -124,33 +117,33 @@ function startTime(element, length) {
   timer.className = "time";
   let timer_value = document.createElement("span");
 
-  // ? Sets The Full Time of Each Question
-  let full_time_in_sec = 80;
+  //! Sets The Full Time of Each Question
+  let full_time_in_sec = 79;
   let seconds;
 
-  //? Sets Minutes From Seconds
+  //! Sets Minutes From Seconds
   let minutes = Math.floor(full_time_in_sec / 60);
 
-  //? Check If Minutes is 0 to assign seconds to full time
+  //! Check If Minutes is 0 to assign seconds to full time
   if (minutes === 0) {
     seconds = full_time_in_sec;
   }
 
-  //? Check If Minutes is not 0 to assign seconds in 0 to 60 range
+  //! Check If Minutes is not 0 to assign seconds in 0 to 60 range
   else if (minutes > 0) {
     seconds = full_time_in_sec - 60 * minutes;
   }
   interval = setInterval(() => {
     let timer_word = `Timer : 0${minutes}:`;
 
-    //? check if seconds > 10 do not seconds as is
+    //! check if seconds > 10 do not seconds as is
     if (seconds >= 10) {
       timer_value.innerHTML = seconds;
       seconds--;
       timer.innerHTML = timer_word;
       timer.appendChild(timer_value);
     }
-    //? check if seconds > 10 to add 0 before seconds
+    //! check if seconds > 10 to add 0 before seconds
     else if (seconds >= 0 && seconds < 10) {
       timer_value.innerHTML = "0" + seconds;
       seconds--;
@@ -158,21 +151,21 @@ function startTime(element, length) {
       timer.appendChild(timer_value);
     }
 
-    //? Start New Minute if minutes > 0
+    //! Start New Minute if Seconds is 0
     if (seconds < 0 && minutes !== 0) {
       seconds = 59;
       minutes--;
     }
 
-    //? Check if time over
+    //! Check if time over
     else if (seconds < 0 && minutes === 0) {
       timeover(element, length);
     }
-    element.appendChild(timer);
+    element.insertBefore(timer, element.firstChild);
   }, 1000);
 }
 
-//? Jump To The Next Question When Time Is Over
+//! Jump To The Next Question When Time Is Over
 async function timeover(element, length) {
   element.classList.add("disable");
   let current_div = element;
@@ -190,7 +183,7 @@ async function timeover(element, length) {
   }
 }
 
-//? Show pop-up Message That Show Result.
+//! Show pop-up Message That Show Result.
 function showResult(length) {
   let overlay = document.querySelector(".overlay");
   let pop_up = document.querySelector(".pop-up");
@@ -217,7 +210,7 @@ function showResult(length) {
   clearInterval(interval);
 }
 
-//? Shuffling The Array Using Fisher-Yates algorithm
+//! Shuffling The Array Using Fisher-Yates algorithm
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
